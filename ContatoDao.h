@@ -11,8 +11,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Contato.h"
+#import "CoreDataBase.h"
 
-@interface ContatoDao : NSObject
+@interface ContatoDao : CoreDataBase
 
 +(id) contatoDaoInstance;
 -(void) adicionarcontato:(Contato*) contato;

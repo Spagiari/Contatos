@@ -12,6 +12,8 @@
 		160368D61D2EC9C8007F7716 /* ContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160368D41D2EC9C8007F7716 /* ContatosNoMapaViewController.m */; };
 		160368D71D2EC9C8007F7716 /* ContatosNoMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160368D51D2EC9C8007F7716 /* ContatosNoMapaViewController.xib */; };
 		160368D91D2ECB10007F7716 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160368D81D2ECB10007F7716 /* MapKit.framework */; };
+		1640ABCC1D301F8900B6DE48 /* ContatosIP67.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1640ABCA1D301F8900B6DE48 /* ContatosIP67.xcdatamodeld */; };
+		1640ABCF1D30271A00B6DE48 /* CoreDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1640ABCE1D30271A00B6DE48 /* CoreDataBase.m */; };
 		165B8AE81D2BF9320009B204 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165B8AE71D2BF9320009B204 /* ListaContatosViewController.m */; };
 		167306401D2AC28E00680390 /* Contatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673063F1D2AC28E00680390 /* Contatos.m */; };
 		16A10BEB1D2AF2CB0060984A /* ContatoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A10BEA1D2AF2CB0060984A /* ContatoDao.m */; };
@@ -52,6 +54,9 @@
 		160368D51D2EC9C8007F7716 /* ContatosNoMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatosNoMapaViewController.xib; sourceTree = "<group>"; };
 		160368D81D2ECB10007F7716 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		160368DA1D2EEA24007F7716 /* VilaMariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VilaMariana.gpx; sourceTree = "<group>"; };
+		1640ABCB1D301F8900B6DE48 /* ContatosIP67.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67.xcdatamodel; sourceTree = "<group>"; };
+		1640ABCD1D30271A00B6DE48 /* CoreDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataBase.h; sourceTree = "<group>"; };
+		1640ABCE1D30271A00B6DE48 /* CoreDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataBase.m; sourceTree = "<group>"; };
 		165B8AE61D2BF9320009B204 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
 		165B8AE71D2BF9320009B204 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 		1673063E1D2AC21100680390 /* Contato.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
@@ -110,6 +115,9 @@
 		16B6B5021D2A92D700442058 = {
 			isa = PBXGroup;
 			children = (
+				1640ABCD1D30271A00B6DE48 /* CoreDataBase.h */,
+				1640ABCE1D30271A00B6DE48 /* CoreDataBase.m */,
+				1640ABCA1D301F8900B6DE48 /* ContatosIP67.xcdatamodeld */,
 				160368DA1D2EEA24007F7716 /* VilaMariana.gpx */,
 				160368D81D2ECB10007F7716 /* MapKit.framework */,
 				160368D31D2EC9C8007F7716 /* ContatosNoMapaViewController.h */,
@@ -371,10 +379,12 @@
 				167306401D2AC28E00680390 /* Contatos.m in Sources */,
 				165B8AE81D2BF9320009B204 /* ListaContatosViewController.m in Sources */,
 				16B6B5161D2A92D700442058 /* FormularioContatoViewController.m in Sources */,
+				1640ABCF1D30271A00B6DE48 /* CoreDataBase.m in Sources */,
 				16B6B5131D2A92D700442058 /* AppDelegate.m in Sources */,
 				160368D01D2E7EA2007F7716 /* GerenciadorDeAcoes.m in Sources */,
 				16A10BEB1D2AF2CB0060984A /* ContatoDao.m in Sources */,
 				16B6B5101D2A92D700442058 /* main.m in Sources */,
+				1640ABCC1D301F8900B6DE48 /* ContatosIP67.xcdatamodeld in Sources */,
 				160368D61D2EC9C8007F7716 /* ContatosNoMapaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +634,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1640ABCA1D301F8900B6DE48 /* ContatosIP67.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1640ABCB1D301F8900B6DE48 /* ContatosIP67.xcdatamodel */,
+			);
+			currentVersion = 1640ABCB1D301F8900B6DE48 /* ContatosIP67.xcdatamodel */;
+			path = ContatosIP67.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 16B6B5031D2A92D700442058 /* Project object */;
 }

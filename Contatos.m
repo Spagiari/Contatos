@@ -10,16 +10,29 @@
 
 @implementation Contato
 
+//@synthesize nome = _nome;
+//@synthesize email = _email;
+//@synthesize endereco = _Endereco;
+//@synthesize site = _site;
+//@synthesize telefone = _telefone;
+//@synthesize foto = _foto;
+//@synthesize latitude = _latitude;
+//@synthesize longitude = _longitude;
+
+
+@dynamic nome, email, endereco, site, telefone, foto, latitude, longitude;
+
+
 -(CLLocationCoordinate2D) coordinate{
-    return CLLocationCoordinate2DMake([_latitude doubleValue], [_longitude doubleValue]);
+    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
 }
 
 -(NSString*) title{
-    return _nome;
+    return self.nome;
 }
 
 -(NSString*) subtitle{
-    return _email;
+    return self.email;
 }
 
 -(NSString *)description {

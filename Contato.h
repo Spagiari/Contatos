@@ -12,8 +12,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreData/CoreData.h>
 
-@interface Contato : NSObject<MKAnnotation>
+@interface Contato : NSManagedObject<MKAnnotation>
 
 -(NSString *)description;
 
@@ -22,9 +23,10 @@
 @property (strong) NSString *email;
 @property (strong) NSString *endereco;
 @property (strong) NSString *site;
-@property (strong) UIImage *foto;
+@property (strong) UIImage  *foto;
 @property (strong) NSNumber *latitude;
 @property (strong) NSNumber *longitude;
+
 @end
 
 #endif /* Contato_h */
