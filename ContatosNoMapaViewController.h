@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "ContatoDao.h"
 
 @interface ContatosNoMapaViewController : UIViewController
-
+@property IBOutlet MKMapView* map;
 @end

@@ -6,8 +6,16 @@
 //  Copyright © 2016 Caelum. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import "Contato.h"
 
-@interface GerenciadorDeAcoes : NSObject
+@interface GerenciadorDeAcoes : NSObject<UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+
+-(id) initWithContato:(Contato *) contato;
+-(void) acoesDoController:(UIViewController*) controller;
+
+@property (weak) Contato *contato;
+@property (weak) UIViewController* controller;
 
 @end
