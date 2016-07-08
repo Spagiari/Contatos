@@ -25,6 +25,8 @@
 -(NSIndexPath*) buscaPosicaoDoContato:(Contato*) contato;
 -(void) removeSection: (NSString*) sec;
 -(NSArray<Contato*>*) getAllContacts;
+-(Contato*) novoContato;
+-(void) commitSubmitedChanges;
 
 @property (strong, readonly) NSMutableDictionary *dicSections;
 @property (strong, readonly) NSMutableArray<NSString*> *keysSections;

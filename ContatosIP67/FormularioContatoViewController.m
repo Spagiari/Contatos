@@ -62,9 +62,10 @@
 }
 
 - (void)criaContato {
-    _contato = [Contato new];
+    _contato = [self.dao novoContato];
     [self pegaDadosDoFormulario];
     [self.dao adicionarcontato:_contato];
+    [self.dao commitSubmitedChanges];
     [self.navigationController popViewControllerAnimated:YES];
 
     NSLog(@"Dados: %@", self.dao);
@@ -72,6 +73,7 @@
 
 - (void) SalvaContato {
     [self pegaDadosDoFormulario];
+    [self.dao commitSubmitedChanges];
     [self.navigationController popViewControllerAnimated:YES];
     [_lista destacaContato:_contato];
 }

@@ -25,12 +25,28 @@ static ContatoDao* defaultdao = nil;
     if (self) {
         _dicSections = [NSMutableDictionary new];
         _keysSections = [NSMutableArray<NSString*> new];
+        [self recuperaContatos];
     }
     return self;
 }
 
+-(void) recuperaContatos {
+    NSFetchRequest* query = [NSFetchRequest fetchRequestWithEntityName:@"TContato"];
+    NSSortDescriptor* sort = [NSSortDescriptor sortDescriptorWithKey:@"nome" ascending:YES];
+    query.sortDescriptors = @[sort];
+    
+    for (Contato* c in [self.managedObjectContext executeFetchRequest:query error:nil]) {
+        [self adicionarcontato:c];
+    }
+    
+}
+
 -(NSArray<NSString*>*) getSections {
     return [_keysSections sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
+
+-(void) commitSubmitedChanges {
+    [self saveContext];
 }
 
 -(void) adicionarcontato:(Contato*) contato {
@@ -71,7 +87,9 @@ static ContatoDao* defaultdao = nil;
     if ([_dicSections objectForKey: sec])
     {
         NSMutableArray* list = [_dicSections objectForKey: sec];
+        [self.managedObjectContext deleteObject:list[pos]];
         [list removeObjectAtIndex:pos];
+        [self commitSubmitedChanges];
     }
 }
 
@@ -97,6 +115,10 @@ static ContatoDao* defaultdao = nil;
         [contatos addObjectsFromArray:_dicSections[i]];
     }
     return contatos;
+}
+
+-(Contato*) novoContato {
+    return [NSEntityDescription insertNewObjectForEntityForName:@"TContato" inManagedObjectContext:self.managedObjectContext];
 }
 
 @end
