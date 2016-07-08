@@ -6,13 +6,13 @@
 //  Copyright © 2016 Caelum. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FormularioContatoViewController.h"
 
-@interface ViewController ()
+@interface FormularioContatoViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FormularioContatoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
